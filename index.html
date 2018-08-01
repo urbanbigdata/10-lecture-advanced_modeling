@@ -1,0 +1,351 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>10-lecture-advanced_modeling</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+		
+		<!-- Include buttons for opening and closing the notes canvas or the chalkboard -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+			
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="images/astemir-almov-265122-unsplash.jpg" data-state="dimbg_dark">
+				<!-- Front page -->
+					<h1>Urban Big Data Analytics</h1>
+					
+					<i>Class 10</i><br>
+					<i>Advanced Modeling</i><br><br>
+					
+					<p>
+					<small>August 1, 2018<br><br>
+					
+					Instructor: <a href="http://andyhong.org" target="_blank">Andy Hong</a>, <i>PhD</i><br>
+					
+					Postdoctoral Research and Teaching Fellow<br>
+					School of Population and Public Health<br>
+					University of British Columbia
+					</small>
+					</p>
+				</section>
+				
+				<section>
+				<!-- Slide 1 -->
+					<h2>Final group project</h2>
+					<ul>
+						<li>Five elements: 1. Problem; 2. Hypotheses; 3. Data and methods; 4. Results and Interpretation; 5. Conclusions</li>
+						<li>Minimum 6 page, single space, Times New Roman 12 font size</li>
+						<li>August 8 (Weds), 12:00 Midnight</li>
+					</ul>
+				</section>
+				
+				<section>
+				<!-- Slide 2 -->
+					<h2>Tomorrow's Schedule</h2>
+					<table>
+						<thead>
+							<tr>
+								<td>Time </td>
+								<td>Event Description</td>
+							</tr>
+							
+						</thead>
+						<tbody>
+						<tr>
+							<td style="width: 40%; vertical-align:top">
+								9:00am - 12:00pm
+							</td>	
+							<td style="width: 60%; vertical-align:top"> 
+								Regular lecture 
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 40%; vertical-align:top">
+								1:30am - 4:00pm
+							</td>	
+							<td style="width: 60%; vertical-align:top"> 
+								Group project presentation
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 40%; vertical-align:top">
+								4:00pm - 5:00pm
+							</td>	
+							<td style="width: 60%; vertical-align:top"> 
+								Special mixer event
+							</td>
+						</tr>
+						</tbody>
+
+					</table>
+				</section>
+					
+				<section>
+				<!-- Slide 2 -->
+					<h2>Final group presentation</h2>
+					<ul>
+						<li>Tomorrow afternoon at 1:30pm</li>
+						<li>Presentation (15 mins), Q&A (5 mins)</li>
+						<li>Each group member needs to present</li>
+						<li>Share some preliminary results</li>						
+					</ul>					
+				</section>
+
+				
+				<section>
+				<!-- Slide 3 -->
+					<h2>Special mixer event (4:00pm)</h2>
+					<div style="position:relative; width:900px; height:600px; margin:0 auto;">
+					  <img class="fragment fade-out"data-fragment-index="1" src="images/dssg.png" style="position:absolute;center:0;left:20px;" />
+					  <img class="fragment fade-in" data-fragment-index="1" src="images/dssg_fellows.png" style="position:absolute;center:0;left:20px;" />
+					</div>
+
+				</section>
+				
+				<section data-background-image="images/advanced_models.jpg" data-state="dimbg_dark">
+				<!-- Slide 4 -->	
+					<h2>Advanced modeling</h2>					
+				</section>
+				<section data-background-image="images/advanced_models.jpg" data-state="dimbg_darker">
+				<!-- Slide 5 -->	
+					<h2>Beyond linear regressions</h2>
+					<ul>						
+						<li>Linear models are good for numbers</li>
+						<li>But, what about categorical data?</li>
+						<li>What about survey data with yes or no questions?</li>
+						<li>Can you convert categories into numbers?</li>
+					</ul>
+				</section>
+				
+				
+				<section>
+				<!-- Slide 6 -->	
+				<h2>BC Generations Survey</h2>
+  				  <img src="images/survey1.png" width="500px" height="580px">
+				</section>	
+				<section>
+				<!-- Slide 7 -->	
+				<h2>Survey questionaires</h2>
+				<div style="position:relative; width:900px; height:600px; margin:0 auto;">
+				  <img src="images/survey2.png" style="position:absolute;center:0;left:20px;" />
+				  <img class="fragment fade-in" data-fragment-index="1" src="images/survey3.png" style="position:absolute;center:0;left:20px;" />
+				  </div>
+				
+				</section>
+				
+				
+				<section>
+				<!-- Slide 8 -->	
+				<h2>Logistic Regression</h2>
+				<img src="images/david_cox.jpg" height="400" style="float: left; margin-right: 100px">
+				<ul style="display: block">
+					<li>"Logit" regression</li>
+					<li>"Logit" model</li>
+					<li>Developed by David Cox in 1958</li>
+					<li>Regression model for categorical outcome Y</li>
+				</ul>
+				</section>
+				
+				<section>
+				<!-- Slide 9 -->	
+				<h2>Why Logistic Regression?</h2>
+				<ul>
+					<li>Linear model, not appropriate for a qualitative response</li>
+					<li>Ex) Question - How would you rate this course?</li>
+					<li>Aweful - Okay - Good - Very Good - Excellent</li>
+					<li>Can we turn this into 1-2-3-4-5? </li>
+					<li class="fragment fade-left"><font color="DeepSkyBlue">No</font>, because the distance between each item is not the same</li>
+				</ul>
+				</section>
+				<section>
+				<!-- Slide 10 -->	
+				<h2>Types of Logistic Regression</h2>
+				<ul>
+					<li class="fragment fade-in"><font color="khaki">Simple logistic model</font>
+						<ul>
+							<li>Binary outcome: "0" and "1"</li>
+							<li>Pass/Fail, Win/Lose, Dead/Alive, Sick/Healthy</li>
+						</ul>
+					</li>
+					<li class="fragment fade-in"><font color="khaki">Multinomial logistic model</font>
+						<ul>
+							<li>Multiple categorical outcomes</li>
+							<li>A range of values: Unsatisfied - Satisfied - Very Satisfied</li>
+						</ul>
+					</li>
+
+				</section>
+				
+				<section>
+				<!-- Slide 11 -->	
+				<h2>Logistic Regression</h2>
+				<table>
+					<tr>
+						<td style="width: 50%; vertical-align:top">
+							<img class="fragment fade-out" data-fragment-index="1" src="images/logit1.png" height="500" style="position:absolute;center:0">
+							<img class="fragment fade-in" data-fragment-index="1" src="images/logit2.png" height="500" style="position:absolute;center:0">
+						</td>	
+						<td style="width: 50%; vertical-align:top"> 
+							<img class="fragment fade-in" data-fragment-index="2" src="images/logit3.png" height="500">
+						</td>
+					</tr>
+
+				</table>
+				</section>
+					
+				<section>
+				<!-- Slide 12 -->	
+				<h2>Linear vs. Logistic Regression</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Linear function</th>
+							<th>Logistic function</th>
+						</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td style="width: 50%; vertical-align:top">
+						<div style="background-color:lightgrey;color:black;padding:10px;opacity: 0.8;">$$ P(Y) =  \beta_{0} + \beta_{1}x $$</div>
+						</td>	
+						<td style="width: 50%; vertical-align:top"> 
+						<div style="background-color:lightgrey;color:black;padding:10px;opacity: 0.8;">$$ P(Y=1) = \frac{\exp(\beta_{0} + \beta_{1}x)}{1 + \exp(\beta_{0} + \beta_{1}x)} $$</div><br>
+						<div class="fragment fade-in" style="background-color:lightgrey;color:black;padding:10px;opacity: 0.8;">$$ ln(\frac{p}{1-p}) =  \beta_{0} + \beta_{1}x $$</div>
+						</td>
+					</tr>
+				</tbody>
+
+				</table>
+				</section>
+				
+				<section>
+				<!-- Slide 13 -->	
+				<h2>Simple Logistic Regression</h2>
+				<div class="fragment fade-in">$$ corruption \approx f(income) $$</div><br>
+					<pre class="fragment fade-in"><code data-trim data-noescape>
+					# Simple Logit Model
+					m1 = glm(data = gapminder, 
+							 corruption ~ income, 
+							 family = "binomial")
+		
+					exp(coef(m1))	
+					confint(m1)		 	 
+					</code></pre>
+					
+				</section>
+				
+				<section>
+				<!-- Slide 14 -->	
+				<h2>Multiple Logistic Regression</h2>
+				<div class="fragment fade-in">$$ corruption \approx f(income, population, democracy) $$</div><br>
+					<pre class="fragment fade-in"><code data-trim data-noescape>
+					# Multiple Logit Model
+					m2 = glm(data = gapminder, 
+							 corruption ~ income + population + democracy, 
+							 family = "binomial")
+					
+					exp(coef(m2))	
+					confint(m2)
+					</code></pre>
+					
+				</section>
+				
+				<section>
+				<!-- Slide 16 -->	
+				<h2>(Optional)</h2>
+				
+				<img src="images/analytics.png" width="700px"><br>
+				
+			  <div class="fragment fade-in" data-fragment-index="1" width="700px" height="200px" style="position:absolute;bottom:0;right:0;margin-bottom:150px;background-color:lightgrey;color:black;padding:10px;opacity: 0.8;">
+					  You can build the models in Exploratory!
+				</div>
+				
+				
+				</section>
+				
+				
+				<section>
+				<!-- Slide 17 -->	
+				<h2>Group Project Updated data!</h2>
+				<a href="https://urbanbigdata.github.io/98-group-project/GroupProject_part4.html", target="_blank">Instruction</a>
+
+				</section>
+				<section>
+				<!-- Slide 18 -->	
+					<h3>Any questions?</h3>
+					For all the course materials, go to <a href="https://urbanbigdata.github.io/" target="_blank">urbanbigdata.github.io</a>
+				</section>
+					
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber : true,
+				//previewLinks: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+				
+				chalkboard: { 
+					// optionally load pre-recorded chalkboard drawing from file
+					//src: "chalkboard.json",
+					color: [ 'rgba(0,0,255,1)', 'rgba(255,255,255,0.5)' ],
+					background: [ 'rgba(127,127,127,.1)' , 'reveal.js-plugins/chalkboard/img/blackboard.png' ]
+					
+				},
+				
+				math: {
+					mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+				},
+				  
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/chalkboard/chalkboard.js' },
+					{ src: 'plugin/math/math.js', async: true }
+				],
+				
+				keyboard: {
+				    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+				    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+				    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+				     8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+				    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+				}
+			});
+		</script>
+	</body>
+</html>
