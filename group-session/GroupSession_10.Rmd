@@ -22,21 +22,32 @@ Please download this CSV file and save it under the group session folder: <a hre
 ## Instruction
 
 ### 1. Synopsis
-The purpose of this group session is to understand the concept of **logistic regression**. We will go through three parts. <br> 
+The purpose of this group session is to understand the concept of **logistic regression**. <br> 
 
-First, we will use Exploratory to build the logistic regression.
+First, we will build a logistic regression model using Exploratory. Then, we will build a logistic regression model using R Studio.
+<br>
 
-Second, we will calculate the log-odds and odds ratio manually. <br>
+### 2. Part one - Building a logistical model in Exploratory
 
-Second, we will create a few plots showing the relationship between income and life expectancy. <br>
+Let's load the gapminder 2011 data. <br>
+Each country has a corruption perception index ranging from 0 to 100, and based on this index, we assigned 1 for countries that have the index greater than 50; and 0 for countries that have the index less than 50. The corruption variable is an arbitrary variable only for a demonstration purpose.<br>
 
-Third, we will create a map showing each of the variables. Then we will export the map as an interactive web map that can be shared with other people.
+Go to `Analytics` and choose `Logistic Regression Analysis` for the type. <br>
+Your target variable is `corruption`, and your predictor variable(s) are: `income`, `population`, and `democracy`.<br>
 
+Mathematically, what we are trying to estimate is the following function.<br>
+
+$logit(p) = log(\frac{p}{1-p}) = \beta_{0} + \beta_{1}x_{1} + \beta_{2}x_{2} + \beta_{3}x_{3}$
+
+where $log(\frac{p}{1-p})$ is the log of odds ratio being in corruption; $x_{1}$is income; $x_{2}$is population; and $x_{3}$is democracy. <br> 
+
+When you click run, you will see the coefficient plot of the logit model results.<br>
+Take a look at the result of democracy. <b>The odds ratio of 0.79 means that for 1-unit increase in democracy, we expect to see about 21% decrease in the odds of being in corruption.</b>
 <br><br>
 
-### 2. Part one - Joining data
+### 3. Part two - Building a logistical model in R Studio
 
-First, we are going to join the gapminder data with the geographic coordinates data. Let's load the libraries first.
+We are going to join the gapminder data with the corruption data. Let's load the libraries first.
 
 ```{r warning=FALSE, message=FALSE}
 
@@ -47,247 +58,68 @@ options(repos="https://cran.rstudio.com")
 # install.packages("dplyr")
 # install.packages("magrittr")
 
-
 # Load packages
 library(dplyr)
 library(magrittr)
 
 ```
 
-Let's load and examine the data.
+Let's load and examine the gapminder data. 
 
-```{r, eval=F}
+```{r}
 gapminder = read.csv("/Users/andyhong/Documents/vsp_bigdata/group-session/10-lecture/gapminder_data_2011.csv")
 
 head(gapminder)
 ```
 
-
-### 3. Part two - Creating plots
-
-Now, let's create some plots for exploratory data anlysis. We will first create a simple graph showing the life expectancy grouped by different continents.
-
-```{r warning=FALSE}
-ggplot(gapminder, aes(x = region, y = lifeExp)) +
-  geom_boxplot()
-```
-
-Let's add all the data points add color for the outliers.
-```{r warning=FALSE}
-ggplot(gapminder, aes(x = region, y = lifeExp)) +
-  geom_boxplot(outlier.colour = "hotpink") +
-  geom_jitter()
-```
-
-Let's follow the Tufte's rule 7 of separating layers by changing the opacity of the points.
-```{r warning=FALSE}
-ggplot(gapminder, aes(x = region, y = lifeExp)) +
-  geom_boxplot(outlier.colour = "hotpink") +
-  geom_jitter(position = position_jitter(width = 0.1, height = 0), alpha = 1/4)
-```
-
-Let's first explore the relationship between income and life expectancy. What relationship do we expect to see?
-```{r warning=FALSE}
-ggplot(gapminder, aes(x = income, y = lifeExp)) +
-  geom_point()
-  
-```
-
-We can be a little fancy by adding a smooth trend line.
-```{r warning=FALSE, message=FALSE}
-ggplot(gapminder, aes(x = income, y = lifeExp)) +
-  geom_point() +
-  geom_smooth()
-  
-```
-
-We can also color different continents.
-```{r warning=FALSE, message=FALSE}
-ggplot(gapminder, aes(x = income, y = lifeExp)) +
-  geom_point(aes(color = region)) +
-  geom_smooth()
-  
-```
-
-We can color the trend lines as well.
-```{r warning=FALSE, message=FALSE}
-ggplot(gapminder, aes(x = income, y = lifeExp)) +
-  geom_point(aes(color = region)) +
-  geom_smooth(aes(color = region))
-  
-```
-
-Or we can just cut the data and show each continent separately using the `facet_grid(row ~ column)` option.
-```{r warning=FALSE, message=FALSE, fig.width=9, fig.height=4.5}
-ggplot(gapminder, aes(x = income, y = lifeExp)) +
-  geom_point(aes(color = region)) +
-  geom_smooth() + 
-  facet_grid(.~region)
-```
-
-The X axis is hard to read. Let's rotate the texts using the `theme` option.
-```{r warning=FALSE, message=FALSE, fig.width=9, fig.height=4.5}
-ggplot(gapminder, aes(x = income, y = lifeExp)) +
-  geom_point(aes(color = region)) +
-  geom_smooth() + 
-  facet_grid(.~region) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
-```
-
-Lastly, we can also make the plot interactive, so that we can see which dot represents which country. Note that we added a `text` option in `geom_point` to include country names.
-```{r warning=FALSE, message=FALSE, fig.width=9, fig.height=4.5}
-p = ggplot(gapminder, aes(x = income, y = lifeExp)) +
-  geom_point(aes(text = paste("Country:", name), color = region)) +
-  geom_smooth() + 
-  facet_grid(.~region) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
-
-ggplotly(p)
-```
-
-<br><br>
-
-
-### 4. Part three - Creating an interactive map
-
-In part three, we will create an interactive web map using the gapminder data. Earlier we joined the coordinate information to the gapminder dataset, so we can use the coordinates to show countries on the map. We will use the powerful `leaflet` package to accomplish this task. First, we will just plot the points on the map, and use `addCircleMarker` function to visualize variales on the map. <br>
-
-Let's initiate `leaflet` and add the empty map tiles. We can use different map tiles available here: <a href="http://leaflet-extras.github.io/leaflet-providers/preview/" target="_blank">http://leaflet-extras.github.io/leaflet-providers/preview/</a>
-
-```{r}
-leaflet(gapminder) %>% addTiles()
-
-# leaflet(gapminder) %>% addProviderTiles(provider = "Stamen.TonerLite")
-# leaflet(gapminder) %>% addProviderTiles(provider = "Stamen.Toner")
-# leaflet(gapminder) %>% addProviderTiles(provider = "Esri.WorldImagery")
-
-```
-
-Let's see what coordinate information we can use. We can see that the variables to use are: long and lat.
-```{r}
-head(gapminder)
-```
-
-Now, let's add the latitude and longitude points on the map. Note that we use the squiggly `~` sign to use the column names without the data name.
-
-```{r}
-leaflet(gapminder) %>% addTiles() %>% addCircleMarkers(~long, ~lat)
-```
-
-Let's use the variable `income` to visualize income levels on the map.
-
-```{r}
-leaflet(gapminder) %>% addTiles() %>% addCircleMarkers(~long, ~lat, radius=~income)
-```
-
-What do you see on the screen? Why is it all blue? <br>
-The `income` data ranges from $650 to $118,000.
-
-```{r}
-gapminder %>% summarise(min=min(income), max=max(income))
-
-```
-
-We need to scale the data to visualize it on the map. We will first divide the income by 1000 and take the square root to scale the data exponentially.
-
-```{r}
-leaflet(gapminder) %>% addTiles() %>% addCircleMarkers(~long, ~lat, radius=~sqrt(income/1000))
-```
-
-<b>Congratulations! You've created your first interactive map.</b><br><br>
-
-Now, it's a lot better, but we don't know which country is which, and it doesn't do anything if we hover over them. Let's label the point with the country name.
-
-```{r}
-leaflet(gapminder) %>% addTiles() %>% addCircleMarkers(~long, ~lat, radius=~sqrt(income/1000), label=~name)
-```
-
-We can see the country name when we move the mouse over to each circle. One way to make all these fancy is to create a `variable` column that computes our variable of interest to scale appropriately and give an appropriate label. <br>
-
-Note that we can chain multiple variables using the `mutate` function.
+We are going to build the basic and the full models. We will use the `glm` function, which is a generalized linear model function. We will use the binomial family to implement the logistic function.
 
 
 ```{r}
-gapminder = gapminder %>% 
-  mutate(variable = income/1000, label = paste(name, "- Income: ", variable, "k"))
+
+model1 = glm(data = gapminder, corruption ~ income, family = binomial)
+model2 = glm(data = gapminder, corruption ~ income + population + democracy, family = binomial)
 
 ```
 
-Now, let's see the final map with an appropriate scale and label.
+Now we can see the results of the models using the `summary` function.
 
 ```{r}
-leaflet(gapminder) %>% addTiles() %>% addCircleMarkers(~long, ~lat, radius=~sqrt(variable), label=~label, weight=2)
+# Show the original results
+summary(model1)
+summary(model2)
 ```
 
-For fun, we can color each circle according to its continent and look for any spatial patterns.
+For interpretation, we can exponentiate the results to get the odds ratio.
+```{r}
+# Show the exponentiated results
+exp(cbind(Odds=coef(model1), confint(model1)))
+exp(cbind(Odds=coef(model2), confint(model2)))
+```
+
+Now, we can also generate the coefficient plot using the `plot_summs` function from the `jtools` package. To get the exponentiated results, we will use the option `exp=TRUE`.
 
 ```{r}
-pal = colorFactor(rainbow(4), gapminder$region)
 
-leaflet(gapminder) %>% 
-  addTiles() %>% 
-  addCircleMarkers(~long, ~lat, radius=~sqrt(variable), label=~label, weight=2, color=~pal(region))
-```
+# Load the jtools package
+library(jtools)
 
-<br><br>
-
-### 5. <font color="red">[Advanced Material]</font> Combining multiple plots
-
-You can assemble multiple plots using the `grid.arrange()` function from the `gridExtra` package. We will name the boxplot p1 and the scatter plot p2, and combine them in one figure.
-
-Let's install and load the grid.extra package first.
-```{r}
-install.packages("gridExtra")
-library(gridExtra)
-```
-
-Now, we will create two ggplot objects.
-```{r}
-
-# Box plot
-p1 = ggplot(gapminder, aes(x = region, y = lifeExp)) +
-  geom_boxplot(outlier.colour = "hotpink") +
-  geom_jitter(position = position_jitter(width = 0.1, height = 0), alpha = 1/4) 
-  
-# Scatter plot
-p2 = ggplot(gapminder, aes(x = income, y = lifeExp)) +
-  geom_point(aes(color = region)) +
-  geom_smooth() + 
-  facet_grid(.~region) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+# Show coefficient plot
+plot_summs(model1, model2, exp=TRUE)
 
 ```
 
-Now, we are going to assemble them together.
-```{r, fig.width=9, fig.height=4}
-grid.arrange(p1, p2, nrow = 1)
-```
 
-We can also assemble vertically.
-```{r,  fig.width=5, fig.height=7}
-grid.arrange(p1, p2, ncol = 1)
-```
-  
-There are others ways to customize your plots. For further information, check out this <a href="https://cran.r-project.org/web/packages/egg/vignettes/Ecosystem.html" target="_blank">vignette</a>.
+## Send your report with the logistic model results and the interpretation
 
-<br><br>
+1. Use either Exploratory or R Studio to develop the best fit logistic model to estimate corruption 
 
-## Export and send the plot and the map
+2. Create a short report that includes the model results and interpret your results.
 
-1. Create a box plot comparing income levels of the four regions. <br>
-
-2. Create a scatter plot showing the relationship between life expectancy and income of the four regions. Show life expectancy on the x-axis and income on the y-axis.<br>
-
-3. Create an interactive map showing the life expectancy of each country. In the label, include country name and life expectancy.<br>
-
-4. Create a short report that includes the plot and the map, and describe each of your graphics.
-
-5. <font color="red">For advanced students</font>, use the `grid.arrange()` function to combine two plots: a box plot showing income levels; a scatter plot showing the relationship between income and life expectancy. Please add the title for each plot using the `ggtitle` function.  <font color="red">Extra 2 points</font>: Along with your assignment 4, add the combined graphs with titles and descriptions.
-
-6. Send your report to the course email (urbanbigdata2019@gmail.com). 
+3. Send your report to the course email (urbanbigdata2019@gmail.com). 
   + <font color="red"><b>[IMPORTANT]</b></font> Please use the following email title format: <br>
  `VSP BigData [lecture number] - [group number] - [presenter name]` <br>
- ex), `VSP BigData Lecture 8 - Group 1 - Bill Gates` <br>
+ ex), `VSP BigData Lecture 11 - Group 1 - Bill Gates` <br>
  
  
 <br><br><br>
