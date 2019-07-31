@@ -206,7 +206,7 @@ summary {
 <p>Go to <code>Analytics</code> and choose <code>Logistic Regression Analysis</code> for the type. <br> Your target variable is <code>corruption</code>, and your predictor variable(s) are: <code>income</code>, <code>population</code>, and <code>democracy</code>.<br></p>
 <p>Mathematically, what we are trying to estimate is the following function.<br></p>
 <p><span class="math inline">\(logit(p) = log(\frac{p}{1-p}) = \beta_{0} + \beta_{1}x_{1} + \beta_{2}x_{2} + \beta_{3}x_{3}\)</span></p>
-<p>where <span class="math inline">\(log(\frac{p}{1-p})\)</span> is the log of odds ratio being in corruption; <span class="math inline">\(x_{1}\)</span>is income; <span class="math inline">\(x_{2}\)</span>is population; and <span class="math inline">\(x_{3}\)</span>is democracy. <br></p>
+<p>where <span class="math inline">\(log(\frac{p}{1-p})\)</span> is the log odds of being in corruption; <span class="math inline">\(x_{1}\)</span>is income; <span class="math inline">\(x_{2}\)</span>is population; and <span class="math inline">\(x_{3}\)</span>is democracy. <br></p>
 <p>When you click run, you will see the coefficient plot of the logit model results.<br> Take a look at the result of democracy. <b>The odds ratio of 0.79 means that for 1-unit increase in democracy, we expect to see about 21% decrease in the odds of being in corruption.</b> <br><br></p>
 </div>
 <div id="part-two---building-a-logistical-model-in-r-studio" class="section level3">

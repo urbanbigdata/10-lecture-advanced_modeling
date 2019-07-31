@@ -39,7 +39,7 @@ Mathematically, what we are trying to estimate is the following function.<br>
 
 $logit(p) = log(\frac{p}{1-p}) = \beta_{0} + \beta_{1}x_{1} + \beta_{2}x_{2} + \beta_{3}x_{3}$
 
-where $log(\frac{p}{1-p})$ is the log of odds ratio being in corruption; $x_{1}$is income; $x_{2}$is population; and $x_{3}$is democracy. <br> 
+where $log(\frac{p}{1-p})$ is the log odds of being in corruption; $x_{1}$is income; $x_{2}$is population; and $x_{3}$is democracy. <br> 
 
 When you click run, you will see the coefficient plot of the logit model results.<br>
 Take a look at the result of democracy. <b>The odds ratio of 0.79 means that for 1-unit increase in democracy, we expect to see about 21% decrease in the odds of being in corruption.</b>
