@@ -1,162 +1,162 @@
-"name","region","population","income","lifeExp","democracy","corruption"
-"Afghanistan","asia",29700000,1660,56.7,NA,1
-"Albania","europe",2930000,10200,76.7,9,1
-"Algeria","africa",36800000,13000,76.7,2,1
-"Angola","africa",24200000,5910,60.9,-2,1
-"Argentina","americas",41700000,19600,76,8,1
-"Armenia","europe",2880000,7020,73.8,5,1
-"Australia","asia",22500000,41800,82.2,10,0
-"Austria","europe",8460000,44200,80.7,10,0
-"Azerbaijan","europe",9150000,15800,69.9,-7,1
-"Bahrain","asia",1280000,40700,76.2,-8,0
-"Bangladesh","asia",154000000,2570,71,5,1
-"Belarus","europe",9470000,17200,70.7,-7,1
-"Belgium","europe",11000000,41200,80.2,8,0
-"Benin","africa",9460000,1820,62.2,7,1
-"Bhutan","asia",741000,6810,72.5,3,0
-"Bolivia","americas",10100000,5600,71.9,7,1
-"Bosnia and Herzegovina","europe",3690000,9890,76.9,NA,1
-"Botswana","africa",2050000,13900,58.9,8,0
-"Brazil","americas",199000000,15000,74.4,8,1
-"Bulgaria","europe",7360000,15700,74.3,9,1
-"Burkina Faso","africa",16100000,1470,58.4,0,1
-"Burundi","africa",9040000,772,58.2,6,1
-"Cambodia","asia",14500000,2660,66.6,2,1
-"Cameroon","africa",20500000,2690,57.7,-4,1
-"Canada","americas",34500000,41600,81.5,10,0
-"Cape Verde","africa",508000,5990,72.7,10,0
-"Central African Republic","africa",4480000,912,48,-1,1
-"Chad","africa",12300000,1860,57,-2,1
-"Chile","americas",17200000,20400,79.5,10,0
-"China","asia",1370000000,10400,75.1,-7,1
-"Colombia","americas",46400000,11500,77,7,1
-"Comoros","africa",707000,1420,65.6,9,1
-"Congo, Dem. Rep.","africa",66700000,630,58,5,1
-"Congo, Rep.","africa",4510000,5210,61.1,-4,1
-"Costa Rica","americas",4600000,13400,80.5,10,0
-"Cote d'Ivoire","africa",20900000,2510,56.9,0,1
-"Croatia","europe",4310000,20700,76.6,9,1
-"Cuba","americas",11400000,18800,78.5,-7,1
-"Cyprus","europe",1120000,33200,80.2,10,0
-"Czech Republic","europe",10600000,28800,77.8,8,1
-"Denmark","europe",5580000,44400,79.8,10,0
-"Djibouti","africa",866000,2710,64.2,2,1
-"Dominican Republic","americas",10000000,11300,74.7,8,1
-"Ecuador","americas",15200000,9930,77,5,1
-"Egypt","africa",85900000,9820,70.9,-2,1
-"El Salvador","americas",6190000,7430,74.3,8,1
-"Equatorial Guinea","africa",994000,34400,61.4,-5,1
-"Eritrea","africa",4470000,1510,62,-7,1
-"Estonia","europe",1330000,24500,76.3,9,0
-"Ethiopia","africa",90000000,1160,62.2,1,1
-"Finland","europe",5390000,40700,80.3,10,0
-"France","europe",63300000,37500,81.7,9,0
-"Gabon","africa",1700000,15900,63.3,3,1
-"Gambia","africa",1750000,1540,66,-5,1
-"Georgia","europe",4170000,7320,73,6,0
-"Germany","europe",80900000,42700,80.3,10,0
-"Ghana","africa",25100000,3400,62.9,8,1
-"Greece","europe",11400000,26100,80.5,10,1
-"Guatemala","americas",14900000,6840,71.5,8,1
-"Guinea","africa",11000000,1210,58.5,5,1
-"Guinea-Bissau","africa",1600000,1490,56.2,6,1
-"Guyana","americas",749000,6130,65.7,6,1
-"Haiti","americas",10100000,1560,60.5,0,1
-"Honduras","americas",8350000,4050,71.8,7,1
-"Hungary","europe",9900000,22700,74.9,10,0
-"India","asia",1250000000,4640,66.6,9,1
-"Indonesia","asia",246000000,8840,70.2,8,1
-"Iran","asia",75500000,17900,74.8,-7,1
-"Iraq","asia",31700000,13300,67.6,3,1
-"Ireland","europe",4660000,45500,80.5,10,0
-"Israel","asia",7570000,30500,81.6,10,0
-"Italy","europe",59800000,36300,81.8,10,1
-"Jamaica","americas",2830000,8100,74.8,9,1
-"Japan","asia",129000000,35800,82.6,10,0
-"Jordan","asia",7570000,9210,76.1,-3,1
-"Kazakhstan","asia",16600000,21300,69,-6,1
-"Kenya","africa",42500000,2560,63.8,8,1
-"North Korea","asia",24700000,1400,70.2,-10,1
-"South Korea","asia",49700000,31200,80.4,8,0
-"Kuwait","asia",3190000,77500,78.9,-7,1
-"Kyrgyz Republic","asia",5510000,2920,69.1,7,1
-"Lao","asia",6330000,4240,64.6,-7,1
-"Latvia","europe",2090000,19800,73.6,8,1
-"Lebanon","asia",4590000,15700,79,7,1
-"Lesotho","africa",2060000,2500,47.5,8,1
-"Liberia","africa",4070000,734,61.4,6,1
-"Libya","africa",6190000,11200,61,0,1
-"Lithuania","europe",3080000,22900,73.5,10,0
-"Macedonia, FYR","europe",2070000,11600,74.2,9,1
-"Madagascar","africa",21700000,1370,61.1,0,1
-"Malawi","africa",15600000,1050,54.5,6,1
-"Malaysia","asia",28600000,21800,74.6,6,1
-"Mali","africa",15500000,1880,60,7,1
-"Mauritania","africa",3720000,3370,68.6,-2,1
-"Mauritius","africa",1250000,16600,73.8,10,0
-"Mexico","americas",119000000,15900,75.8,8,1
-"Moldova","europe",4080000,4180,71.5,8,1
-"Mongolia","asia",2760000,8880,66.6,10,1
-"Montenegro","europe",625000,14500,76.4,9,1
-"Morocco","africa",32900000,6690,73.8,-4,1
-"Mozambique","africa",24900000,955,55,5,1
-"Myanmar","asia",50600000,3900,67.4,-3,1
-"Namibia","africa",2220000,8720,60.1,6,1
-"Nepal","asia",27300000,2030,68.7,6,1
-"Netherlands","europe",16700000,46100,80.9,10,0
-"New Zealand","asia",4420000,32700,81,10,0
-"Nicaragua","americas",5810000,4230,77.5,9,1
-"Niger","africa",17100000,802,59.3,6,1
-"Nigeria","africa",163000000,5260,61.3,4,1
-"Norway","europe",4950000,62100,81.2,10,0
-"Oman","asia",3240000,42100,76.4,-8,1
-"Pakistan","asia",174000000,4310,65.8,6,1
-"Panama","americas",3710000,16900,77.9,9,1
-"Papua New Guinea","asia",7270000,2260,59,4,1
-"Paraguay","americas",6290000,7510,74.1,8,1
-"Peru","americas",29800000,10400,78.1,9,1
-"Philippines","asia",95300000,5710,69.2,8,1
-"Poland","europe",38300000,22900,76.5,10,0
-"Portugal","europe",10600000,26800,80.1,10,0
-"Qatar","asia",1950000,129000,80,-10,0
-"Romania","europe",20300000,18100,74.5,9,1
-"Russia","europe",143000000,24100,69.8,4,1
-"Rwanda","africa",10500000,1420,65.3,-4,0
-"Saudi Arabia","asia",28200000,48500,75.3,-10,1
-"Senegal","africa",13300000,2160,64.4,7,1
-"Serbia","europe",8990000,13000,74.8,8,1
-"Sierra Leone","africa",6610000,1250,55.7,7,1
-"Singapore","asia",5180000,75000,82.9,-2,0
-"Slovak Republic","europe",5410000,25800,75.9,10,1
-"Slovenia","europe",2050000,28800,79.8,10,0
-"Somalia","africa",12400000,614,53.4,0,1
-"South Africa","africa",52300000,12200,55.8,9,1
-"Spain","europe",46900000,32100,82.2,10,0
-"Sri Lanka","asia",20300000,9210,76,4,1
-"Sudan","africa",35200000,3630,66.5,-2,1
-"Suriname","americas",532000,14900,70.5,5,1
-"Swaziland","africa",1230000,7320,48.9,-9,1
-"Sweden","europe",9470000,43800,81.7,10,0
-"Switzerland","europe",7930000,55900,82.5,10,0
-"Syria","asia",20900000,6360,75,-7,1
-"Tajikistan","asia",7820000,2210,69.9,-3,1
-"Tanzania","africa",47600000,2190,59.9,-1,1
-"Thailand","asia",67500000,13500,76.9,7,1
-"Timor-Leste","asia",1130000,1960,71.6,7,1
-"Togo","africa",6680000,1230,59.6,-2,1
-"Trinidad and Tobago","americas",1330000,31000,72.7,10,1
-"Tunisia","africa",10800000,10100,77,NA,1
-"Turkey","europe",73400000,19700,78.2,9,1
-"Turkmenistan","asia",5170000,11200,68.4,-9,1
-"Uganda","africa",35100000,1630,57.7,-1,1
-"Ukraine","europe",45600000,8280,71.1,6,1
-"United Arab Emirates","asia",8670000,58400,76.5,-8,0
-"United Kingdom","europe",63800000,36500,80.5,10,0
-"United States","americas",311000000,49800,78.8,10,0
-"Uruguay","americas",3390000,17900,76.4,10,0
-"Uzbekistan","asia",29100000,4470,69,-9,1
-"Venezuela","americas",29500000,17000,75.4,-3,1
-"Vietnam","asia",89400000,4720,73.3,-7,1
-"Yemen","asia",24300000,3810,67.7,-2,1
-"Zambia","africa",14300000,3360,53.2,7,1
-"Zimbabwe","africa",14400000,1660,51.9,1,1
+"name","region","population","income","lifeExp","democracy","corruption","corruption_index"
+"Afghanistan","asia",29700000,1660,56.7,NA,1,8
+"Albania","europe",2930000,10200,76.7,9,1,33
+"Algeria","africa",36800000,13000,76.7,2,1,34
+"Angola","africa",24200000,5910,60.9,-2,1,22
+"Argentina","americas",41700000,19600,76,8,1,35
+"Armenia","europe",2880000,7020,73.8,5,1,34
+"Australia","asia",22500000,41800,82.2,10,0,85
+"Austria","europe",8460000,44200,80.7,10,0,69
+"Azerbaijan","europe",9150000,15800,69.9,-7,1,27
+"Bahrain","asia",1280000,40700,76.2,-8,0,51
+"Bangladesh","asia",154000000,2570,71,5,1,26
+"Belarus","europe",9470000,17200,70.7,-7,1,31
+"Belgium","europe",11000000,41200,80.2,8,0,75
+"Benin","africa",9460000,1820,62.2,7,1,36
+"Bhutan","asia",741000,6810,72.5,3,0,63
+"Bolivia","americas",10100000,5600,71.9,7,1,34
+"Bosnia and Herzegovina","europe",3690000,9890,76.9,NA,1,42
+"Botswana","africa",2050000,13900,58.9,8,0,65
+"Brazil","americas",199000000,15000,74.4,8,1,43
+"Bulgaria","europe",7360000,15700,74.3,9,1,41
+"Burkina Faso","africa",16100000,1470,58.4,0,1,38
+"Burundi","africa",9040000,772,58.2,6,1,19
+"Cambodia","asia",14500000,2660,66.6,2,1,22
+"Cameroon","africa",20500000,2690,57.7,-4,1,26
+"Canada","americas",34500000,41600,81.5,10,0,84
+"Cape Verde","africa",508000,5990,72.7,10,0,60
+"Central African Republic","africa",4480000,912,48,-1,1,26
+"Chad","africa",12300000,1860,57,-2,1,19
+"Chile","americas",17200000,20400,79.5,10,0,72
+"China","asia",1370000000,10400,75.1,-7,1,39
+"Colombia","americas",46400000,11500,77,7,1,36
+"Comoros","africa",707000,1420,65.6,9,1,28
+"Congo, Dem. Rep.","africa",66700000,630,58,5,1,21
+"Congo, Rep.","africa",4510000,5210,61.1,-4,1,26
+"Costa Rica","americas",4600000,13400,80.5,10,0,54
+"Cote d'Ivoire","africa",20900000,2510,56.9,0,1,29
+"Croatia","europe",4310000,20700,76.6,9,1,46
+"Cuba","americas",11400000,18800,78.5,-7,1,48
+"Cyprus","europe",1120000,33200,80.2,10,0,66
+"Czech Republic","europe",10600000,28800,77.8,8,1,49
+"Denmark","europe",5580000,44400,79.8,10,0,90
+"Djibouti","africa",866000,2710,64.2,2,1,36
+"Dominican Republic","americas",10000000,11300,74.7,8,1,32
+"Ecuador","americas",15200000,9930,77,5,1,32
+"Egypt","africa",85900000,9820,70.9,-2,1,32
+"El Salvador","americas",6190000,7430,74.3,8,1,38
+"Equatorial Guinea","africa",994000,34400,61.4,-5,1,20
+"Eritrea","africa",4470000,1510,62,-7,1,25
+"Estonia","europe",1330000,24500,76.3,9,0,64
+"Ethiopia","africa",90000000,1160,62.2,1,1,33
+"Finland","europe",5390000,40700,80.3,10,0,90
+"France","europe",63300000,37500,81.7,9,0,71
+"Gabon","africa",1700000,15900,63.3,3,1,35
+"Gambia","africa",1750000,1540,66,-5,1,34
+"Georgia","europe",4170000,7320,73,6,0,52
+"Germany","europe",80900000,42700,80.3,10,0,79
+"Ghana","africa",25100000,3400,62.9,8,1,45
+"Greece","europe",11400000,26100,80.5,10,1,36
+"Guatemala","americas",14900000,6840,71.5,8,1,33
+"Guinea","africa",11000000,1210,58.5,5,1,24
+"Guinea-Bissau","africa",1600000,1490,56.2,6,1,25
+"Guyana","americas",749000,6130,65.7,6,1,28
+"Haiti","americas",10100000,1560,60.5,0,1,19
+"Honduras","americas",8350000,4050,71.8,7,1,28
+"Hungary","europe",9900000,22700,74.9,10,0,55
+"India","asia",1250000000,4640,66.6,9,1,36
+"Indonesia","asia",246000000,8840,70.2,8,1,32
+"Iran","asia",75500000,17900,74.8,-7,1,28
+"Iraq","asia",31700000,13300,67.6,3,1,18
+"Ireland","europe",4660000,45500,80.5,10,0,69
+"Israel","asia",7570000,30500,81.6,10,0,60
+"Italy","europe",59800000,36300,81.8,10,1,42
+"Jamaica","americas",2830000,8100,74.8,9,1,38
+"Japan","asia",129000000,35800,82.6,10,0,74
+"Jordan","asia",7570000,9210,76.1,-3,1,48
+"Kazakhstan","asia",16600000,21300,69,-6,1,28
+"Kenya","africa",42500000,2560,63.8,8,1,27
+"North Korea","asia",24700000,1400,70.2,-10,1,8
+"South Korea","asia",49700000,31200,80.4,8,0,56
+"Kuwait","asia",3190000,77500,78.9,-7,1,44
+"Kyrgyz Republic","asia",5510000,2920,69.1,7,1,24
+"Lao","asia",6330000,4240,64.6,-7,1,21
+"Latvia","europe",2090000,19800,73.6,8,1,49
+"Lebanon","asia",4590000,15700,79,7,1,30
+"Lesotho","africa",2060000,2500,47.5,8,1,45
+"Liberia","africa",4070000,734,61.4,6,1,41
+"Libya","africa",6190000,11200,61,0,1,21
+"Lithuania","europe",3080000,22900,73.5,10,0,54
+"Macedonia, FYR","europe",2070000,11600,74.2,9,1,43
+"Madagascar","africa",21700000,1370,61.1,0,1,32
+"Malawi","africa",15600000,1050,54.5,6,1,37
+"Malaysia","asia",28600000,21800,74.6,6,1,49
+"Mali","africa",15500000,1880,60,7,1,34
+"Mauritania","africa",3720000,3370,68.6,-2,1,31
+"Mauritius","africa",1250000,16600,73.8,10,0,57
+"Mexico","americas",119000000,15900,75.8,8,1,34
+"Moldova","europe",4080000,4180,71.5,8,1,36
+"Mongolia","asia",2760000,8880,66.6,10,1,36
+"Montenegro","europe",625000,14500,76.4,9,1,41
+"Morocco","africa",32900000,6690,73.8,-4,1,37
+"Mozambique","africa",24900000,955,55,5,1,31
+"Myanmar","asia",50600000,3900,67.4,-3,1,15
+"Namibia","africa",2220000,8720,60.1,6,1,48
+"Nepal","asia",27300000,2030,68.7,6,1,27
+"Netherlands","europe",16700000,46100,80.9,10,0,84
+"New Zealand","asia",4420000,32700,81,10,0,90
+"Nicaragua","americas",5810000,4230,77.5,9,1,29
+"Niger","africa",17100000,802,59.3,6,1,33
+"Nigeria","africa",163000000,5260,61.3,4,1,27
+"Norway","europe",4950000,62100,81.2,10,0,85
+"Oman","asia",3240000,42100,76.4,-8,1,47
+"Pakistan","asia",174000000,4310,65.8,6,1,27
+"Panama","americas",3710000,16900,77.9,9,1,38
+"Papua New Guinea","asia",7270000,2260,59,4,1,25
+"Paraguay","americas",6290000,7510,74.1,8,1,25
+"Peru","americas",29800000,10400,78.1,9,1,38
+"Philippines","asia",95300000,5710,69.2,8,1,34
+"Poland","europe",38300000,22900,76.5,10,0,58
+"Portugal","europe",10600000,26800,80.1,10,0,63
+"Qatar","asia",1950000,129000,80,-10,0,68
+"Romania","europe",20300000,18100,74.5,9,1,44
+"Russia","europe",143000000,24100,69.8,4,1,28
+"Rwanda","africa",10500000,1420,65.3,-4,0,53
+"Saudi Arabia","asia",28200000,48500,75.3,-10,1,44
+"Senegal","africa",13300000,2160,64.4,7,1,36
+"Serbia","europe",8990000,13000,74.8,8,1,39
+"Sierra Leone","africa",6610000,1250,55.7,7,1,31
+"Singapore","asia",5180000,75000,82.9,-2,0,87
+"Slovak Republic","europe",5410000,25800,75.9,10,1,46
+"Slovenia","europe",2050000,28800,79.8,10,0,61
+"Somalia","africa",12400000,614,53.4,0,1,8
+"South Africa","africa",52300000,12200,55.8,9,1,43
+"Spain","europe",46900000,32100,82.2,10,0,65
+"Sri Lanka","asia",20300000,9210,76,4,1,40
+"Sudan","africa",35200000,3630,66.5,-2,1,13
+"Suriname","americas",532000,14900,70.5,5,1,37
+"Swaziland","africa",1230000,7320,48.9,-9,1,37
+"Sweden","europe",9470000,43800,81.7,10,0,88
+"Switzerland","europe",7930000,55900,82.5,10,0,86
+"Syria","asia",20900000,6360,75,-7,1,26
+"Tajikistan","asia",7820000,2210,69.9,-3,1,22
+"Tanzania","africa",47600000,2190,59.9,-1,1,35
+"Thailand","asia",67500000,13500,76.9,7,1,37
+"Timor-Leste","asia",1130000,1960,71.6,7,1,33
+"Togo","africa",6680000,1230,59.6,-2,1,30
+"Trinidad and Tobago","americas",1330000,31000,72.7,10,1,39
+"Tunisia","africa",10800000,10100,77,NA,1,41
+"Turkey","europe",73400000,19700,78.2,9,1,49
+"Turkmenistan","asia",5170000,11200,68.4,-9,1,17
+"Uganda","africa",35100000,1630,57.7,-1,1,29
+"Ukraine","europe",45600000,8280,71.1,6,1,26
+"United Arab Emirates","asia",8670000,58400,76.5,-8,0,68
+"United Kingdom","europe",63800000,36500,80.5,10,0,74
+"United States","americas",311000000,49800,78.8,10,0,73
+"Uruguay","americas",3390000,17900,76.4,10,0,72
+"Uzbekistan","asia",29100000,4470,69,-9,1,17
+"Venezuela","americas",29500000,17000,75.4,-3,1,19
+"Vietnam","asia",89400000,4720,73.3,-7,1,31
+"Yemen","asia",24300000,3810,67.7,-2,1,23
+"Zambia","africa",14300000,3360,53.2,7,1,37
+"Zimbabwe","africa",14400000,1660,51.9,1,1,20
